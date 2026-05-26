@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: kunafa-heaven
+    env: node
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: GMAIL_USER
+        value: heavenkunafa@gmail.com
+      - key: GMAIL_APP_PASSWORD
+        sync: false
+      - key: SECRET_KEY
+        generateValue: true
+      - key: PORT
+        value: 3000
